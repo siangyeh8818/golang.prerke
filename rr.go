@@ -3,16 +3,20 @@ package main
 import (
 	"bytes"
 	"fmt"
+
 	//"glog"
 	gexpect "github.com/ThomasRooney/gexpect"
 	//	"github.com/google/goexpect"
 	//	"github.com/google/goterm/term"
-	"golang.org/x/crypto/ssh"
-	"gopkg.in/yaml.v2"
 	"io/ioutil"
 	"log"
 	"os"
+
+	"golang.org/x/crypto/ssh"
+	"gopkg.in/yaml.v2"
+
 	//"errors"
+
 	"regexp"
 	"strings"
 	"time"
@@ -375,6 +379,15 @@ func getAddress() Configs {
 	return config
 
 }
+
+/*
+func RunCommand(commandStr string) string {
+	cmdstr := commandStr
+	out, _ := exec.Command("sh", "-c", cmdstr).Output()
+	strout := string(out)
+	return strout
+}
+*/
 func CheckSSHKeyExisted() {
 	if _, err := os.Stat("/root/.ssh"); os.IsNotExist(err) {
 		fmt.Println("---------------------------------------------------------")
@@ -391,11 +404,11 @@ func main() {
 	CheckSSHPASS()
 	CheckSSHKeyExisted()
 	sshuser = "root"
-	sshpassword = "promise"
+	sshpassword = "solarvm12345"
 	//sshpassword = "pentiumvm"
 	sshport = "22"
 	sshAddress = "172.16.155.170"
-	deployUser = "pentium"
+	deployUser = "Jia-Siang"
 	var cmds string
 	if user, err := getRkeUser(); err != nil {
 		fmt.Println(err)
