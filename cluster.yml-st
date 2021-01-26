@@ -25,32 +25,6 @@ nodes:
   ssh_key_path: /root/.ssh/id_rsa
   labels: {}
 
-# - address: 172.16.155.152
-#   port: "22"
-#   internal_address: ""
-#   role:
-#   - controlplane
-#   - etcd
-#   hostname_override: k8s-master02
-#   user: root
-#   docker_socket: /var/run/docker.sock
-#   ssh_key: ""
-#   ssh_key_path: /root/.ssh/id_rsa
-#   labels: {}
-
-# - address: 172.16.155.153
-#   port: "22"
-#   internal_address: ""
-#   role:
-#   - controlplane
-#   - etcd
-#   hostname_override: k8s-master03
-#   user: root
-#   docker_socket: /var/run/docker.sock
-#   ssh_key: ""
-#   ssh_key_path: /root/.ssh/id_rsa
-#   labels: {}
-
 
 services:
   etcd:

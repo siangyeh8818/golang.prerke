@@ -1,5 +1,7 @@
-#image install:  curl https://releases.rancher.com/install-docker/17.03.sh | sh
-# ignote dockerversion will install 17.03 as default image
+image install:  curl https://releases.rancher.com/install-docker/18.06.sh | sh
+# ignote dockerversion will install 18.06 as default image
+rke_tool: https://github.com/rancher/rke/releases/download/v1.2.5/rke_linux-amd64
+user: Jia-Siang
 password: promise
 nodes:
   - address: 172.16.155.241
